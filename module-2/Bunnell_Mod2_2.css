@@ -1,29 +1,63 @@
 /* Author: Reed Bunnell | Assignment: Module 2.2 */
 
-body {
+/* Base font size for HTML and body */
+html, body {
+  font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   margin: 20px;
-  line-height: 1.6;
+  line-height: 1.4em;
 }
 
-#container {
-  width: 80%;
-  margin: 0 auto;
+/* Paragraph text */
+p {
+  font-weight: 400;
 }
 
+/* h1 styling */
 h1 {
-  color: darkblue;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
 }
 
+/* h2 styling */
 h2 {
-  color: darkred;
+  font-weight: 500;
+  text-align: left;
+  padding-top: 15px;
 }
 
-.intro {
+/* Address block */
+address {
+  text-align: center;
+  font-style: normal; /* prevent auto-italic */
+}
+
+/* Website URL link inside address */
+address a {
   font-weight: bold;
+  font-size: 1.25em;
+  color: #4F3674;
+  text-decoration: none;
 }
 
+/* Hover state */
+address a:hover {
+  text-decoration: underline;
+  background-color: #D6A800;
+}
+
+/* Visited state (you can pick your own; here I used purple) */
+address a:visited {
+  color: purple;
+}
+
+/* Intro paragraph (first one) */
+.intro {
+  text-indent: 2em;
+}
+
+/* Sentence span */
 .sentence {
-  color: green;
   font-style: italic;
 }
