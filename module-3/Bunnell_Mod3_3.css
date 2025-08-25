@@ -1,0 +1,52 @@
+/* Layout & container */
+#container { width: 80%; margin: 0 auto; }
+
+/* Title */
+h1 { text-align: center; }
+
+/* Side-by-side columns */
+.columns { display: flex; justify-content: space-between; gap: 2%; }
+.columns > div { width: 45%; }
+
+/* Last/bottom section */
+#bottom { width: 100%; margin-top: 60%; float: right; margin-bottom: 20px; }
+
+/* Typography weights */
+h3 { font-weight: 500; }
+ol, ul { font-weight: 300; }
+
+/* LEFT COLUMN (Ordered list + its title) */
+#left h3,
+#left ol {
+  border: 1px solid red;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+/* Keep the numbers inside the border box */
+#left ol { list-style-position: inside; }
+
+/* RIGHT COLUMN (Unordered list + its title) */
+#right h3,
+#right ul {
+  border: 1px dashed red;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+/* Change bullets to upper-roman & keep markers inside */
+#right ul {
+  list-style-type: upper-roman;
+  list-style-position: inside;
+}
+
+/* Links */
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+#bottom {
+    width: 100%;
+    margin-top: 60%;
+    float: right;
+    margin-bottom: 20px;
+}
+
