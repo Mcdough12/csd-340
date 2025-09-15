@@ -43,10 +43,4 @@ ol, ul { font-weight: 300; }
 /* Links */
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
-#bottom {
-    width: 100%;
-    margin-top: 60%;
-    float: right;
-    margin-bottom: 20px;
-}
 
