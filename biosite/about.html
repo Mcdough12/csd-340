@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>bioSite | About</title>
+  <!-- Use the same path as your other pages: if yours is /css/styles.css, change it here too -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header / Nav -->
+  <nav>
+    <div class="navbar container" role="navigation" aria-label="Primary">
+      <div class="brand">
+        <div class="brand-logo" aria-hidden="true"></div>
+        <div class="brand-name">bioSite</div>
+      </div>
+      <div class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html" aria-current="page">About</a>
+        <a class="nav-link" href="hobbies.html">Hobbies</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Hero / Intro -->
+    <section class="section section--violet">
+      <h1>About</h1>
+      <p class="lead">
+        Background, education, and goals — presented with the same visual system
+        (colored borders, cards, and figures) used across the site.
+      </p>
+    </section>
+
+    <!-- Bio Summary Cards -->
+    <section class="grid" aria-label="Biography overview">
+      <article class="card card--blue">
+        <h2>Biography</h2>
+        <p>
+          Replace this with a concise summary: who you are, what you care about,
+          and what readers should know first.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Education</h2>
+        <p>
+          Add schools, degrees, standout coursework, and certifications. Focus
+          on outcomes and skills gained.
+        </p>
+      </article>
+
+      <article class="card card--green">
+        <h2>Goals</h2>
+        <p>
+          Share short- and long-term goals to give context for your projects and
+          interests.
+        </p>
+      </article>
+    </section>
+
+    <!-- Images with Captions (organism) -->
+    <section class="section section--blue" aria-label="Images with captions">
+      <h2>Images & Captions</h2>
+      <div class="grid">
+        <figure class="figure">
+          <img class="responsive" src="assets/images/hero.svg" alt="Abstract gradient hero illustration" />
+          <figcaption>Figure 1. Swap this placeholder for a real portrait or location shot.</figcaption>
+        </figure>
+        <figure class="figure">
+          <img class="responsive" src="assets/images/gallery.svg" alt="Gallery placeholder panels" />
+          <figcaption>Figure 2. Use this area to highlight a project or milestone.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- External Link (assignment requirement) -->
+    <section class="section section--green">
+      <h2>External Link</h2>
+      <p>
+        Explore related resources at
+        <a class="external" href="https://bellevue.edu" target="_blank" rel="noopener">Bellevue University ↗</a>.
+      </p>
+      <p class="muted">This fulfills the external-link requirement.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer container">
+    <div>© <span id="year"></span> Your Name. Built with HTML &amp; CSS.</div>
+    <ul class="inline">
+      <li><a href="https://github.com/Mcdough12/bioSite" target="_blank" rel="noopener">GitHub Repo ↗</a></li>
+      <li><a href="https://bellevue.edu" target="_blank" rel="noopener">External Link ↗</a></li>
+    </ul>
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  </footer>
+</body>
+</html>

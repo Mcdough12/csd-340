@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>bioSite | Hobbies</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav>
+    <div class="navbar container" role="navigation" aria-label="Primary">
+      <div class="brand">
+        <div class="brand-logo" aria-hidden="true"></div>
+        <div class="brand-name">bioSite</div>
+      </div>
+      <div class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="hobbies.html" aria-current="page">Hobbies</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="section section--green">
+      <h1>Hobbies</h1>
+      <p class="lead">Showcase a few interests with images and short captions.</p>
+    </section>
+
+    <section class="grid" aria-label="Hobby Gallery">
+      <figure class="figure">
+        <img class="responsive" src="assets/images/gallery.svg" alt="Hobby gallery placeholder" />
+        <figcaption>Hobby A — replace this with a real photo and a one-line story.</figcaption>
+      </figure>
+      <figure class="figure">
+        <img class="responsive" src="assets/images/hero.svg" alt="Hobby highlight placeholder" />
+        <figcaption>Hobby B — add a brief, vivid caption.</figcaption>
+      </figure>
+      <figure class="figure">
+        <img class="responsive" src="assets/images/gallery.svg" alt="Another hobby placeholder" />
+        <figcaption>Hobby C — keep captions short and scannable.</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <div>© <span id="year"></span> Your Name. Built with HTML & CSS.</div>
+    <ul class="inline">
+      <li><a href="https://github.com/Mcdough12/bioSite" target="_blank" rel="noopener">GitHub Repo ↗</a></li>
+      <li><a href="https://bellevue.edu" target="_blank" rel="noopener">External Link ↗</a></li>
+    </ul>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
+</body>
+</html>
