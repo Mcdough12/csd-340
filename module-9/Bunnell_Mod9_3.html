@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  Assignment 9.3
+  Student: Bunnell
+-->
+<head>
+  <meta charset="UTF-8" />
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <style>
+    body{font-family: Arial, sans-serif; line-height:1.6; margin:24px;}
+    h1{margin-top:0;}
+    button{margin:6px 8px 6px 0; padding:6px 10px;}
+    .blank{letter-spacing:2px;}
+  </style>
+  <script>
+    // Four variables for the four blanks
+    var firstVariableValue  = "aerial";
+    var secondVariableValue = "independence";
+    var thirdVariableValue  = "courage";
+    var fourthVariableValue = "unity";
+  </script>
+</head>
+<body>
+  <h1>Assignment 9.3: JavaScript - Part 1</h1>
+
+  <p><strong>President Whitmore's Speech (excerpt)</strong></p>
+
+  <p>
+    Good morning. In less than an hour aircraft from here will join others from around the world,
+    and you will be launching the largest <span id="aerial" class="blank">_________</span> battle
+    in the history of mankind.
+  </p>
+
+  <p>
+    We will not go quietly into the night. We will not vanish without a fight. We're going to live on.
+    We're going to survive. Today, we celebrate our <span id="independence" class="blank">_________</span> day!
+  </p>
+
+  <p>
+    Together, we will show <span id="courage" class="blank">_________</span> and
+    <span id="unity" class="blank">_________</span>—not just to ourselves, but to the world.
+  </p>
+
+  <p>
+    <!-- One button per span that fills in the blank -->
+    <button type="button"
+      onclick="document.getElementById('aerial').textContent = firstVariableValue">aerial</button>
+
+    <button type="button"
+      onclick="document.getElementById('independence').textContent = secondVariableValue">independence</button>
+
+    <button type="button"
+      onclick="document.getElementById('courage').textContent = thirdVariableValue">courage</button>
+
+    <button type="button"
+      onclick="document.getElementById('unity').textContent = fourthVariableValue">unity</button>
+  </p>
+</body>
+</html>
