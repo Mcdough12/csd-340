@@ -3,122 +3,80 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>bioSite | Home</title>
+  <title>Angela Bunnell | bioSite</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Header / Nav -->
   <nav>
     <div class="navbar container" role="navigation" aria-label="Primary">
       <div class="brand">
         <div class="brand-logo" aria-hidden="true"></div>
-        <div class="brand-name">bioSite</div>
+        <div class="brand-name">Angela Bunnell • bioSite</div>
       </div>
       <div class="nav-links">
         <a class="nav-link" href="index.html" aria-current="page">Home</a>
         <a class="nav-link" href="about.html">About</a>
         <a class="nav-link" href="hobbies.html">Hobbies</a>
+        <a class="nav-link" href="Contact.html">Contact</a>
       </div>
     </div>
   </nav>
 
-  <!-- Main Content -->
   <main class="container">
-    <!-- Hero / Intro -->
-    <section class="section section--blue">
+    <section class="section">
       <h1>Welcome</h1>
       <p class="lead">
-        This template uses <span class="badge">colored borders</span> and
-        <strong>clean sections</strong> to organize content in a way that’s
-        easy to scan and visually appealing.
+        A personal bioSite for <strong>Angela Bunnell</strong>.
       </p>
       <p>
-        Replace this text with your own introduction. This is the first
-        impression of your bioSite, so keep it short and engaging.
+        Explore Angela’s background, hobbies, and inspirations.
+      </p>
+      <p>
+        Visit <a href="https://bellevue.edu" target="_blank" rel="noopener">Bellevue University</a>.
+        <span class="badge">External link</span>
       </p>
     </section>
 
-    <!-- Cards -->
     <section class="grid">
-      <article class="card card--blue">
+      <article class="card card--purple">
         <h2>About</h2>
-        <p>
-          Learn more about me on the
-          <a href="about.html">About page ↗</a>. I’ve included details about my
-          background, education, and goals.
-        </p>
+        <p>Read Angela’s short bio and a 10‑question interview covering family, work, and what motivates her.</p>
+        <p><a href="about.html">Go to About →</a></p>
       </article>
-
       <article class="card">
-        <h2>External Link</h2>
-        <p>
-          Visit <a href="https://bellevue.edu" target="_blank" rel="noopener"
-            >Bellevue University ↗</a
-          >.
-        </p>
-        <p class="muted">
-          This fulfills the assignment’s external-link requirement.
-        </p>
+        <h2>Hobbies</h2>
+        <p>Reading, gardening, and cooking — each with a brief caption and image spot.</p>
+        <p><a href="hobbies.html">See Hobbies →</a></p>
       </article>
-
       <article class="card card--green">
-        <h2>Tech Stack</h2>
-        <p>
-          Built with semantic <strong>HTML</strong>, modern <strong>CSS</strong>,
-          and responsive design principles.
-        </p>
+        <h2>Contact</h2>
+        <p>Email and GitHub for questions about the project.</p>
+        <p><a href="Contact.html">Contact →</a></p>
       </article>
     </section>
 
-    <!-- Images with captions -->
-    <section class="section section--violet" aria-label="Images with captions">
+    <section class="section section--gold" aria-label="Images with captions">
       <h2>Images & Captions</h2>
       <div class="grid">
         <figure class="figure">
-          <img
-            class="responsive"
-            src="assets/images/hero.svg"
-            alt="Abstract gradient hero illustration"
-          />
-          <figcaption>
-            Figure 1. Hero image placeholder — replace with a real photo.
-          </figcaption>
+          <img class="responsive" src="assets/images/landing1.jpg" alt="Portrait placeholder" />
+          <figcaption>Figure 1. Angela and Husband Derrick.</figcaption>
         </figure>
         <figure class="figure">
-          <img
-            class="responsive"
-            src="assets/images/gallery.svg"
-            alt="Gallery placeholder panels"
-          />
-          <figcaption>
-            Figure 2. Gallery placeholder — swap in real images later.
-          </figcaption>
+          <img class="responsive" src="assets/images/landing2.jpg" alt="Gallery placeholder" />
+          <figcaption>Hobbies.</figcaption>
         </figure>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="footer container">
-    <div>© <span id="year"></span> Your Name. Built with HTML &amp; CSS.</div>
+    <div>© <span id="year"></span> Reed Bunnell. Built for CSD‑340.</div>
     <ul class="inline">
-      <li>
-        <a
-          href="https://github.com/Mcdough12/bioSite"
-          target="_blank"
-          rel="noopener"
-          >GitHub Repo ↗</a
-        >
-      </li>
-      <li>
-        <a href="https://bellevue.edu" target="_blank" rel="noopener"
-          >External Link ↗</a
-        >
-      </li>
+      <li><a href="https://github.com/Mcdough12/bioSite" target="_blank" rel="noopener">GitHub Repo ↗</a></li>
+      <li><a href="https://bellevue.edu" target="_blank" rel="noopener">External Link ↗</a></li>
     </ul>
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
   </footer>
 </body>
 </html>

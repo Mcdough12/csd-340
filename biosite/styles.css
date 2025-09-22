@@ -1,130 +1,127 @@
-/* ===== Base Theme ===== */
+/* ===== Base Theme (Module 4 Style Guide) ===== */
 :root{
-  --bg:#0f172a;            /* deep slate */
-  --panel:#0b1220;         /* dark panel */
-  --panel-2:#111827;       /* slightly lighter panel */
-  --text:#e5e7eb;          /* light text */
-  --muted:#9ca3af;         /* muted text */
-  --border:#1f2937;        /* section/card borders */
-  --accent:#38bdf8;        /* sky blue */
-  --accent-2:#a78bfa;      /* violet */
-  --accent-3:#34d399;      /* green */
-  --link:#7dd3fc;          /* link */
+  --primary:#4F3674;    /* Purple */
+  --secondary:#D6A800;  /* Gold */
+  --accent:#069546;     /* Green */
+  --neutral:#333333;    /* Neutral dark text */
+  --bg:#ffffff;         /* Light background for Module 4 */
+  --panel:#faf9fd;      /* Subtle panel tint */
+  --border:#e6e2f0;     /* Soft border */
   --radius:14px;
   --maxw:1100px;
 }
 
+/* Reset & base */
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-  background:
-    radial-gradient(1000px 700px at 80% -10%, rgba(56,189,248,.12), transparent 60%),
-    radial-gradient(800px 600px at 10% -20%, rgba(167,139,250,.10), transparent 60%),
-    var(--bg);
-  color: var(--text);
+  font-family: Arial, sans-serif; /* Body font per guide */
+  background: var(--bg);
+  color: var(--neutral);
   line-height: 1.6;
 }
 
-/* ===== Links & Text ===== */
-a{color:var(--link);text-decoration:none}
-a:hover{text-decoration:underline}
-h1,h2,h3{line-height:1.2;margin:0 0 .4rem}
-h1{font-size:clamp(1.8rem, 2.2vw, 2.3rem)}
-h2{font-size:clamp(1.2rem, 1.6vw, 1.4rem); color:#cbd5e1}
+/* Typography */
+h1,h2,h3{
+  font-family: Georgia, serif; /* Headings per guide */
+  line-height:1.2;
+  margin:0 0 .5rem;
+  color: var(--primary);
+}
+h1{font-size:clamp(2rem, 3vw, 2.5rem); font-weight:700; text-transform:none;}
+h2{font-size:clamp(1.35rem, 2vw, 1.6rem); font-weight:600; color: var(--primary);}
 p{margin:.25rem 0 1rem}
 
-/* ===== Layout ===== */
+/* Links */
+a{color: var(--secondary); text-decoration:none; font-weight:600;}
+a:hover{ text-decoration: underline; background-color: rgba(214,168,0,.12); }
+a:visited{ color:#6b4b9a; } /* visited state allowed per assignment hint */
+
+/* Layout */
 .container{max-width:var(--maxw); margin:0 auto; padding:24px}
 main{display:grid; gap:24px; margin-top:18px}
 
-/* ===== Header / Nav (organism) ===== */
+/* Header / Nav */
 nav{
-  position:sticky; top:0; z-index:50;
-  background:rgba(11,18,32,.7);
-  backdrop-filter: saturate(140%) blur(8px);
-  border-bottom:1px solid var(--border);
+  position:sticky; top:0; z-index:10;
+  background:#fff;
+  border-bottom:3px solid var(--primary);
 }
-.navbar{
-  display:flex; align-items:center; justify-content:space-between;
-  padding:14px 24px;
-}
+.navbar{display:flex; align-items:center; justify-content:space-between; padding:14px 24px}
 .brand{display:flex; align-items:center; gap:12px}
 .brand-logo{
-  width:36px;height:36px;border-radius:10px;
-  background:conic-gradient(from 200deg, #38bdf8, #7c3aed, #22d3ee);
-  box-shadow:0 0 30px rgba(34,211,238,.35);
+  width:38px; height:38px; border-radius:10px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
 }
-.brand-name{font-weight:700; letter-spacing:.3px}
+.brand-name{font-weight:700; letter-spacing:.3px; color: var(--primary);}
 .nav-links{display:flex; gap:8px; flex-wrap:wrap}
 .nav-link{
-  padding:8px 12px; border-radius:999px; border:1px solid transparent;
-  color:var(--text);
+  padding:8px 12px; border-radius:999px; border:2px solid transparent;
+  color: var(--neutral);
 }
 .nav-link[aria-current="page"]{
-  background:rgba(56,189,248,.12);
-  border-color:rgba(125,211,252,.22);
+  border-color: var(--secondary);
+  background: rgba(214,168,0,.08);
 }
 
-/* ===== Pretty Sections with Colored Borders ===== */
+/* Sections */
 .section{
-  background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00)),
-              var(--panel);
-  border:1px solid var(--border);
-  border-left-width:6px;
-  border-radius:var(--radius);
+  background: #fff;
+  border:2px solid var(--border);
+  border-left:8px solid var(--primary); /* large purple left border for H1 sections */
+  border-radius: var(--radius);
   padding:22px;
 }
-.section--blue{   border-left-color: var(--accent); }
-.section--violet{ border-left-color: var(--accent-2); }
-.section--green{  border-left-color: var(--accent-3); }
+.section--gold{ border-left-color: var(--secondary); }
+.section--green{ border-left-color: var(--accent); }
 
-/* ===== Cards & Grids ===== */
+/* Cards & Grid */
 .grid{
   display:grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap:18px;
 }
 .card{
-  background:var(--panel-2);
-  border:1px solid var(--border);
-  border-top:4px solid var(--accent-2);
+  background: var(--panel);
+  border:2px solid var(--border);
+  border-top:6px solid var(--secondary);
   border-radius:12px;
   padding:16px;
 }
-.card--blue{  border-top-color: var(--accent); }
-.card--green{ border-top-color: var(--accent-3); }
+.card--green{ border-top-color: var(--accent); }
+.card--purple{ border-top-color: var(--primary); }
 
-/* ===== Figures (images with captions) ===== */
+/* Figures */
 .figure{
-  background:var(--panel-2);
-  border:1px solid var(--border);
+  background:#fff;
+  border:2px solid var(--border);
   border-radius:12px; overflow:hidden;
 }
 .figure img{display:block; width:100%; height:auto}
 .figure figcaption{
-  padding:10px 12px; color:var(--muted);
-  border-top:1px solid var(--border); font-size:.95rem;
+  padding:10px 12px; color:#555;
+  border-top:2px solid var(--border); font-size:.95rem;
 }
 img.responsive{max-width:100%; height:auto; display:block}
 
-/* ===== Footer ===== */
+/* Utilities */
+.badge{
+  display:inline-block; font-size:.9rem;
+  padding:6px 10px; border-radius:999px;
+  background: rgba(79,54,116,.08);
+  border:1px solid rgba(79,54,116,.25);
+  color: var(--primary);
+}
+.lead{color:#444}
+.muted{color:#666}
+
+/* Footer */
 .footer{
-  border-top:1px solid var(--border);
-  color:var(--muted);
+  border-top:3px solid var(--primary);
+  color:#555;
   padding:18px 24px;
   margin-top:32px;
   font-size:.95rem;
 }
-.footer a{color:var(--link)}
+.footer a{color: var(--secondary)}
 .inline{display:flex; gap:12px; flex-wrap:wrap; padding:0; margin:0; list-style:none}
-
-/* ===== Utilities ===== */
-.badge{
-  display:inline-block; font-size:.9rem;
-  padding:6px 10px; border-radius:999px;
-  background:rgba(56,189,248,.12);
-  border:1px solid rgba(125,211,252,.25);
-}
-.lead{color:#d1d5db}
-.muted{color:var(--muted)}
