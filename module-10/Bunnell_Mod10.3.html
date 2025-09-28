@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <style>
+    :root {
+      --bg-1: #f5f7ff;
+      --ink: #222;
+      --ink-muted: #555;
+      --accent: #4F3674;
+      --card: #ffffff;
+      --ring: rgba(79,54,116,0.25);
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, var(--bg-1), #e8ebff);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+    }
+    .shell {
+      width: min(1100px, 96vw);
+      background: var(--card);
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      padding: 24px;
+    }
+    header h1 { margin: 0 0 8px; }
+    header p { margin: 0 0 16px; color: var(--ink-muted); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 800px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+    .thumbs { display: grid; gap: 12px; }
+    .thumb {
+      border: 2px solid transparent;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .thumb img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .thumb:hover { transform: scale(1.02); }
+    .thumb.active { border-color: var(--accent); }
+
+    .stage img {
+      width: 100%;
+      border-radius: 12px;
+      max-height: 400px;
+      object-fit: cover;
+    }
+    .meta { margin-top: 12px; }
+    .meta h3 { margin: 0; }
+    .meta p { margin: 6px 0; color: var(--ink-muted); }
+    .btn {
+      padding: 6px 12px;
+      background: var(--accent);
+      border: none;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+      margin-right: 8px;
+    }
+    .btn:hover { opacity: 0.9; }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <h1>Assignment 10.3: JavaScript - Part 2</h1>
+      <p>CSD 340 Web Development with HTML and CSS</p>
+    </header>
+
+    <section class="grid">
+      <!-- LEFT: Thumbnails -->
+      <aside class="thumbs">
+        <div class="thumb active" data-title="Sunrise Over Lake" data-desc="A calm sunrise scene with warm golden light." data-theme="sunrise" onclick="selectImage(this)">
+          <img src="./images/sunrise.jpg" alt="Sunrise over a calm lake" />
+        </div>
+        <div class="thumb" data-title="City at Night" data-desc="A colorful city skyline glowing at night." data-theme="night" onclick="selectImage(this)">
+          <img src="./images/city-night.jpg" alt="City skyline at night with neon lights" />
+        </div>
+        <div class="thumb" data-title="Forest Trail" data-desc="A peaceful trail winding through a sunlit forest." data-theme="forest" onclick="selectImage(this)">
+          <img src="./images/forest-trail.jpg" alt="Forest trail surrounded by tall trees" />
+        </div>
+        <div class="thumb" data-title="Beach Day" data-desc="Sunny day at a sandy beach with turquoise water." data-theme="beach" onclick="selectImage(this)">
+          <img src="./images/beach.jpg" alt="Sunny beach with clear blue water" />
+        </div>
+      </aside>
+
+      <!-- RIGHT: Main Display -->
+      <section class="stage">
+        <img id="heroImg" src="./images/sunrise.jpg" alt="Selected hero image" />
+        <div class="meta">
+          <h3 id="heroTitle">Sunrise Over Lake</h3>
+          <p id="heroDesc">A calm sunrise scene with warm golden light.</p>
+          <button class="btn" onclick="toggleCaption()">Toggle Caption</button>
+          <button class="btn" onclick="cycleFrame()">Change Frame</button>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script>
+    const heroImg = document.getElementById('heroImg');
+    const heroTitle = document.getElementById('heroTitle');
+    const heroDesc = document.getElementById('heroDesc');
+    const frames = ["none","4px solid #fff","6px solid #4F3674","8px double #222"];
+    let frameIndex = 0;
+
+    function selectImage(el) {
+      document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+      el.classList.add('active');
+      const img = el.querySelector('img');
+      heroImg.src = img.src;
+      heroImg.alt = img.alt;
+      heroTitle.textContent = el.dataset.title;
+      heroDesc.textContent = el.dataset.desc;
+    }
+
+    function toggleCaption() {
+      heroDesc.style.display = (heroDesc.style.display === "none") ? "block" : "none";
+      heroTitle.style.display = (heroTitle.style.display === "none") ? "block" : "none";
+    }
+
+    function cycleFrame() {
+      frameIndex = (frameIndex + 1) % frames.length;
+      heroImg.style.border = frames[frameIndex];
+    }
+  </script>
+</body>
+</html>
